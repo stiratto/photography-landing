@@ -7,23 +7,17 @@ import { Button } from "./ui/button"
 import { Textarea } from "./ui/textarea"
 import { Label } from "./ui/label"
 import { toast } from "sonner"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import { Loader } from "lucide-react"
 
 const OtherForm = () => {
+  const [loading, setLoading] = useState(false)
   const form = useForm<TOtherFormSchema>({
     resolver: zodResolver(OtherFormSchema),
     mode: 'onChange',
   })
 
   const sendForm = async (data) => {
-    toast.loading('Give us one second...', {
-      style: {
-        backgroundColor: '#965d24',
-        color: 'white',
-        borderRadius: 0,
-        border: 0
-      }
-    })
 
     const excelUrl = "https://script.google.com/macros/s/AKfycbznOMbWhnCn5azK1c-6XbURjNifnQ1-QL5KmSRDKn-3w1jjCSDhdwCRfwjn5u8269LL/exec"
 
@@ -36,12 +30,14 @@ const OtherForm = () => {
     })
 
     if (!response.ok) {
+      setLoading(false)
       throw new Error("Couldn't send the form to Excel")
     }
 
   }
 
   const onSubmit: SubmitHandler<TOtherFormSchema> = async (data) => {
+    setLoading(true)
     let { first_name, description, phone_number, city, email, second_name, business_instagram } = data
     if (!phone_number) {
       data.phone_number = ''
@@ -54,6 +50,7 @@ const OtherForm = () => {
 
     window.localStorage.setItem("form_submitted", 'true')
 
+    setLoading(false)
     setTimeout(() => {
       window.location.href = "/";
     }, 100);
@@ -139,7 +136,11 @@ const OtherForm = () => {
             </FormItem>
           )} />
 
-          <Button type="submit" className="bg-[#965d24] hover:bg-[#dfb968] p-4 rounded-none w-full font-bold uppercase text-sm cursor-pointer">Submit</Button>
+          <Button type="submit" className="bg-[#965d24] hover:bg-[#dfb968] p-4 rounded-none w-full font-bold uppercase text-sm cursor-pointer" disabled={loading}>
+            {loading ? <Loader className="animate-spin duration-300" /> : ""}
+            Submit
+
+          </Button>
         </form>
       </Form>
     </main>
