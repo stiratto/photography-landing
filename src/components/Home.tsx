@@ -13,7 +13,7 @@ const Home = () => {
 					border: 0
 				}
 			})
-			localStorage.clear()
+			localStorage.removeItem("form_submitted")
 		}
 	}, [])
 	return (

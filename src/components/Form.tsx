@@ -13,12 +13,18 @@ const OtherForm = () => {
   const form = useForm<TOtherFormSchema>({
     resolver: zodResolver(OtherFormSchema),
     mode: 'onChange',
-    defaultValues: {
-      description: ""
-    }
   })
 
   const sendForm = async (data) => {
+    toast.loading('Give us one second...', {
+      style: {
+        backgroundColor: '#965d24',
+        color: 'white',
+        borderRadius: 0,
+        border: 0
+      }
+    })
+
     const excelUrl = "https://script.google.com/macros/s/AKfycbznOMbWhnCn5azK1c-6XbURjNifnQ1-QL5KmSRDKn-3w1jjCSDhdwCRfwjn5u8269LL/exec"
 
     const response = await fetch(excelUrl, {
@@ -47,20 +53,15 @@ const OtherForm = () => {
     await sendForm(data)
 
     window.localStorage.setItem("form_submitted", 'true')
-    window.location.href = '/'
 
-
-
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 100);
   }
-
-  useEffect(() => {
-
-  }, [])
   return (
     <main className=" min-h-screen flex flex-col justify-center items-center w-full">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-xl">
-
           <div className="flex flex-col md:flex-row items-center gap-4 w-full justify-between">
             <FormField name='first_name' render={({ field }) => (
               <FormItem>
