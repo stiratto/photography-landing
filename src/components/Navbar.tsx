@@ -10,7 +10,7 @@ import { NavItems } from "@/lib/consts";
 export default function Navbar() {
 
   return (
-    <nav className="flex flex-col items-end p-4 fixed top-0 w-full z-[100] ">
+    <nav className="flex flex-col items-end p-4 fixed top-0 w-full z-[100]">
       <Sheet>
         <SheetTrigger className="">
           <button aria-label="Toggle mobile menu" className="hamburger" >

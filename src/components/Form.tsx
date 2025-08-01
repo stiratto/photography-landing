@@ -33,7 +33,6 @@ const OtherForm = () => {
       setLoading(false)
       throw new Error("Couldn't send the form to Excel")
     }
-
   }
 
   const onSubmit: SubmitHandler<TOtherFormSchema> = async (data) => {

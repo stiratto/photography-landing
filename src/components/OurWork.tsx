@@ -42,8 +42,8 @@ export default function OurWork() {
   }, []);
 
   return (
-    <section className="min-h-screen max-w-full w-auto py-8 flex flex-col items-center gap-8 px-4">
-      <h3 className="text-4xl md:text-5xl">our <span className="bg-[#965d24]">work</span></h3>
+    <section className="min-h-screen max-w-full w-auto py-8 flex flex-col items-center gap-8 px-4 text-white">
+      <h3 className="text-4xl md:text-5xl text-black">our <span className="bg-[#965d24] text-white">work</span></h3>
 
       <div className="flex justify-center flex-wrap gap-8">
         {businesses.map((b, i) => (

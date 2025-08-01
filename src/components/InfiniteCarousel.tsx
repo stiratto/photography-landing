@@ -1,10 +1,10 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 import '@splidejs/react-splide/css/core';
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 const InfiniteCarousel = () => {
-  const splideOptions = {
+  const splideOptions: Options = {
     type: "loop",
     autoScroll: {
       pauseOnHover: false, // Do not pause scrolling when hovering over the carousel
@@ -15,8 +15,9 @@ const InfiniteCarousel = () => {
     drag: false,
     arrows: false, // Hide navigation arrows
     pagination: false, // Hide pagination dots
-    fixedWidth: '245px', // Fixed width for each slide
-    gap: "10px"
+    gap: "10px",
+    perPage: 6, // o 3, ajusta según el tamaño deseado
+
   }
 
   const items = [
@@ -51,15 +52,13 @@ const InfiniteCarousel = () => {
   ]
 
   return (
-    <div className="relative flex flex-col items-center py-18 space-y-4">
-      <h1 className="text-4xl md:text-5xl">Businesses <span className="text-[#dfb968]">we've worked</span> with</h1>
-      {/* Container for the carousel with a fixed width */}
-      <div className="w-1/2">
-        {/* Splide component with configuration options */}
-        <Splide options={splideOptions} extensions={{ AutoScroll }}>
+    <div className="flex flex-col items-center py-18 space-y-8 max-w-[100vw] text-white">
+      <h1 className="text-4xl md:text-5xl mx-4 text-black">Businesses <span className="bg-[#965d24] text-white">we've worked</span> with</h1>
+      <div className="">
+        <Splide options={splideOptions} extensions={{ AutoScroll }} className="max-w-[100vw]">
           {items.map((item, index) => (
             <SplideSlide key={index}>
-              <img src={item.src} alt={`Logo ${index + 1}`} className="w-[7rem] " />
+              <img src={item.src} alt={`Logo ${index + 1}`} className="" />
             </SplideSlide>
           ))}
         </Splide>
