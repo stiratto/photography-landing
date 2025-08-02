@@ -7,9 +7,11 @@
     "dist"
   ],
   "compilerOptions": {
+    "strictNullChecks": true,
+    "allowJs": true, 
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

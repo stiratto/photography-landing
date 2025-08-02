@@ -22,10 +22,10 @@ const Home = () => {
 
 			<div className="absolute top-0 left-0 w-full h-full z-0 flex">
 				<video autoPlay muted loop className="md:w-1/2 h-full object-cover">
-					<source src="/videos/output.mp4" type="video/mp4" />
+					<source src="/videos/barbershop1.mp4" type="video/mp4" />
 				</video>
 				<video autoPlay muted loop className="hidden md:block md:w-1/2 md:h-full md:object-cover">
-					<source src="/videos/comida-video.mp4" type="video/mp4" />
+					<source src="/videos/comida1.mp4" type="video/mp4" />
 				</video>
 			</div>
 

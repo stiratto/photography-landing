@@ -1,6 +1,6 @@
 ---
 import "@/styles/index.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar.astro";
 import Footer from "@/components/Footer.astro";
 import { Toaster } from "@/components/ui/sonner";
 import { ClientRouter } from "astro:transitions";
@@ -22,3 +22,11 @@ import { ClientRouter } from "astro:transitions";
     <Footer />
   </body>
 </html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+</style>
