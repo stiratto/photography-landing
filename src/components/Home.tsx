@@ -25,7 +25,7 @@ const Home = () => {
 					<source src="/videos/barbershop1.mp4" type="video/mp4" />
 				</video>
 				<video autoPlay muted loop className="hidden md:block md:w-1/2 md:h-full md:object-cover">
-					<source src="/videos/comida1.mp4" type="video/mp4" />
+					<source src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4" type="video/mp4" />
 				</video>
 			</div>
 

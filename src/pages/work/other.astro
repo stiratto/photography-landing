@@ -1,0 +1,58 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="min-h-screen py-24 px-4 relative bg-black text-white w-full">
+    <div class="absolute inset-0 z-10 bg-black/80"></div>
+
+    <div class="relative z-20">
+      <div class="videos grid grid-cols-6 grid-rows-2 gap-6 max-w-7xl mx-auto">
+        <video
+          src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="rounded-xl shadow-xl col-span-6 md:col-span-3 md:row-span-2 w-full h-full object-cover"
+        ></video>
+
+        <video
+          src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/realtor1_e8eueg.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="rounded-xl shadow-xl col-span-6 md:col-span-3 md:row-span-2 w-full h-full object-cover video-realtor"
+        ></video>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  video {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  video:hover {
+    transform: scale(1.02);
+  }
+</style>
+
+<script>
+  const videos = document.querySelectorAll<HTMLVideoElement>(".videos video");
+  const realtor = document.querySelector<HTMLVideoElement>(".video-realtor");
+  realtor.currentTime = 20;
+
+  for (const video of videos) {
+    video.playbackRate = 0.3;
+    video.addEventListener("mouseover", () => {
+      video.playbackRate = 1;
+      video.play();
+    });
+    video.addEventListener("mouseleave", () => {
+      video.playbackRate = 0.3;
+    });
+  }
+</script>

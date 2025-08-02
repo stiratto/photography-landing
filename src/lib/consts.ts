@@ -1,14 +1,14 @@
 export const NavItems = [
-  { text: 'Home', href: '/' },
+  { text: 'home', href: '/' },
   {
-    text: 'Barbershop',
-    href: '/work/barbershop'
+    text: 'barbershops',
+    href: '/work/barbershops'
   }, {
-    text: 'Restaurants',
+    text: 'restaurants',
     href: '/work/restaurants'
   },
   {
-    text: 'Service 3',
-    href: '/work/barbershop'
+    text: 'other 🔥 stuff',
+    href: '/work/other'
   }
 ]

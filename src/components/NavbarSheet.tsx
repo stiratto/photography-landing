@@ -10,17 +10,17 @@ export const NavbarSheet = () => {
         </button>
       </SheetTrigger>
       <SheetContent
-        side="right"
-        className="bg-black z-1000"
+        side="left"
+        className="bg-black z-1000 border-none"
       >
         <SheetHeader />
         <ul
-          className="flex flex-col gap-4 p-4 text-[clamp(2rem,3vw,5rem)] uppercase font-extrabold text-white"
+          className="flex flex-col gap-4 p-4 text-[clamp(1rem,3vw,2rem)] font-extrabold text-white"
         >
           {
             NavItems.map((service, index) => (
               <li key={index}>
-                <a href={`${service.href}`} className="text-[#dfb968] tracking-wider">
+                <a href={`${service.href}`} className="text-[#dfb968] tracking-wider hover:underline ">
                   {service.text}
                 </a>
               </li>

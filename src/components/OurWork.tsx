@@ -5,9 +5,9 @@ import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 const businesses = [
-  { title: "Realtor", video: "/videos/realtor1.mp4" },
-  { title: "Restaurants", video: "/videos/comida2.mp4" },
-  { title: "Barbershops", video: "/videos/output.mp4" },
+  { title: "restaurants", video: "/videos/comida2.mp4" },
+  { title: "barbershops", video: "https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/barbershop1_o7qvdp" },
+  { title: "other", video: "https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4" },
 ];
 export default function OurWork() {
 
@@ -27,15 +27,14 @@ export default function OurWork() {
   useEffect(() => {
     const containers = document.querySelectorAll(".videoContainer");
     const videos = document.querySelectorAll("video")
-    const realtor = document.querySelector("#video-Realtor")
-    realtor.currentTime = 20
+    videos[0].currentTime = 20
 
     for (const video of videos) {
-
       video.playbackRate = 0.5
     }
+
     containers.forEach((container, index) => {
-      const video = container.querySelector(`#video${index}`) as HTMLVideoElement;
+      const video = container.querySelector<HTMLVideoElement>(`#video${index}`)
       container.addEventListener("mouseenter", () => video?.play());
       container.addEventListener("mouseleave", () => video?.pause());
     });
@@ -47,58 +46,29 @@ export default function OurWork() {
 
       <div className="flex justify-center flex-wrap gap-8">
         {businesses.map((b, i) => (
-          <article key={i} className="w-xs md:w-sm lg:w-lg min-h-[820px] flex flex-col group justify-center items-start relative videoContainer cursor-pointer">
+          <article key={i} className="">
+            <a href={`/work/${b.title.toLowerCase()}`} className="w-xs md:w-sm lg:w-lg min-h-[820px] flex flex-col group justify-center items-start relative videoContainer cursor-pointer">
 
-            <div className="inset-0 absolute w-full bg-gradient-to-t from-black via-black/10 to-transparent z-10 group-hover:from-transparent" />
+              <div className="inset-0 absolute w-full bg-gradient-to-t from-black via-black/10 to-transparent z-10 group-hover:from-transparent  " />
 
-            <div className="inset-0 absolute w-full">
-              <video autoPlay muted loop playsInline className="h-full object-cover video" id={`video-${b.title}`}>
-                <source src={b.video} />
-              </video>
-            </div>
-            <div className="z-50 p-2 flex flex-col mx-auto">
-              <p className="mb-4 text-center text-3xl">{b.title}</p>
-              <button className="bg-[#965D24] hover:bg-[#dfb968] p-4 text-sm cursor-pointer w-full uppercase font-bold">
-                See {b.title} work
-              </button>
-            </div>
+              <div className="inset-0 absolute w-full rounded-xl">
+                <video autoPlay muted loop playsInline className="h-full w-full object-cover video" id={`video-${b.title}`}>
+                  <source src={b.video} />
+                </video>
+              </div>
+              <div className="z-50 p-2 flex flex-col mx-auto ">
+
+                <p className="mb-4 text-center text-3xl">{b.title}</p>
+                <button className="bg-[#965D24] hover:bg-[#dfb968] p-4 text-sm cursor-pointer w-full uppercase font-bold">
+                  See {b.title} work
+                </button>
+              </div>
+            </a>
           </article>
         ))}
       </div>
 
-      {/* 
 
-<div className="h-full lg:hidden">
-        <Splide options={splideOptions} extensions={{ AutoScroll }} className="!h-full">
-          {businesses.map((b, i) => (
-            <SplideSlide key={i} className="">
-              <article className="flex flex-col justify-center items-start relative videoContainer cursor-pointer h-full">
-                <div className="inset-0 absolute w-full bg-black/50 z-10" />
-                <div className="inset-0 absolute w-full bg-black/90 ">
-                  <video muted loop playsInline className="h-full object-cover video" id={`video${i}`}>
-                    <source src={b.video} className="" />
-                  </video>
-                </div>
-                <div className="z-50 p-2 flex flex-col mx-auto">
-                  <p className="mb-4 text-center text-3xl">{b.title}</p>
-                  <button className="bg-[#965D24] hover:bg-[#dfb968] p-4 text-sm cursor-pointer w-full uppercase font-bold">
-                    See {b.title} work
-                  </button>
-                </div>
-              </article>
-            </SplideSlide>
-          ))}
-        </Splide>
-      </div>
-
-
-
-
-
-
-
-
-      */}
     </section>
   );
 }
