@@ -11,7 +11,7 @@ export const NavbarSheet = () => {
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="bg-black z-1000 border-none"
+        className="bg-transparent z-1000 border-none shadow-none"
       >
         <SheetHeader />
         <ul
@@ -20,7 +20,7 @@ export const NavbarSheet = () => {
           {
             NavItems.map((service, index) => (
               <li key={index}>
-                <a href={`${service.href}`} className="text-[#dfb968] tracking-wider hover:underline ">
+                <a href={`${service.href}`} className="text-[#dfb968] tracking-wider hover:ml-4 transition-all">
                   {service.text}
                 </a>
               </li>

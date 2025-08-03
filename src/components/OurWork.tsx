@@ -1,76 +1,127 @@
-// VideoSlider.tsx
 import { useEffect } from "react";
-import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-
 const businesses = [
-  { title: "restaurants", video: "/videos/comida2.mp4" },
-  { title: "barbershops", video: "https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/barbershop1_o7qvdp" },
-  { title: "other", video: "https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4" },
+  {
+    title: "restaurants",
+    video:
+      "https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_573B2327-A889-4BEF-AF6D-8364B0C3565E_fizguf.mp4",
+  },
+  {
+    title: "barbershops",
+    video:
+      "https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/barbershop1_o7qvdp",
+  },
+  {
+    title: "other",
+    video:
+      "https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4",
+  },
 ];
+
+
 export default function OurWork() {
-
-  const splideOptions: Options = {
-    autoplay: true,
-    type: "loop",
-    autoScroll: { pauseOnHover: true, pauseOnFocus: true, rewind: true, speed: 1.5 },
-    arrows: false,
-    pagination: false,
-    slideFocus: true,
-    perPage: 1,
-    gap: "10px",
-    rewindByDrag: true,
-  };
-
-
   useEffect(() => {
     const containers = document.querySelectorAll(".videoContainer");
-    const videos = document.querySelectorAll("video")
-    videos[0].currentTime = 20
+    const videos = document.querySelectorAll("video");
+
+    if (videos[0]) videos[0].currentTime = 20;
 
     for (const video of videos) {
-      video.playbackRate = 0.5
+      video.playbackRate = 0.5;
     }
 
-    containers.forEach((container, index) => {
-      const video = container.querySelector<HTMLVideoElement>(`#video${index}`)
+    containers.forEach((container) => {
+      const video = container.querySelector("video");
       container.addEventListener("mouseenter", () => video?.play());
       container.addEventListener("mouseleave", () => video?.pause());
     });
+
   }, []);
 
   return (
-    <section className="min-h-screen max-w-full w-auto py-8 flex flex-col items-center gap-8 px-4 text-white">
-      <h3 className="text-4xl md:text-5xl text-black">our <span className="bg-[#965d24] text-white">work</span></h3>
+    <section className="min-h-screen max-w-full w-auto py-8 flex flex-col items-center gap-8 px-4 text-black px-8 md:px-24">
+      <span className="font-fancy text-5xl self-end">02</span>
+      <h3 className="text-4xl md:text-5xl text-black font-fancy">
+        your brand <span className="bg-[#965d24] text-white">captured</span>
+      </h3>
 
-      <div className="flex justify-center flex-wrap gap-8">
-        {businesses.map((b, i) => (
-          <article key={i} className="">
-            <a href={`/work/${b.title.toLowerCase()}`} className="w-xs md:w-sm lg:w-lg min-h-[820px] flex flex-col group justify-center items-start relative videoContainer cursor-pointer">
+      <div className="grid grid-cols-1 lg:grid-cols-5 grid-rows-6 gap-6 work-container max-w-[1440px] mx-auto px-4">
+        {/* Video principal grande (ocupa 3 columnas, 6 filas) */}
+        <article className="lg:col-span-3 lg:row-span-6 w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <a
+            href="/work/restaurants"
+            className="group relative block h-full w-full"
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+            >
+              <source src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_573B2327-A889-4BEF-AF6D-8364B0C3565E_fizguf.mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 rounded-2xl" />
+            <div className="absolute bottom-0 p-6 z-20">
+              <p className="text-4xl font-bold text-white mb-4">restaurants</p>
+              <button className="bg-[#965D24] hover:bg-[#dfb968] p-3 text-sm font-semibold uppercase rounded-md">
+                See restaurants work
+              </button>
+            </div>
+          </a>
+        </article>
 
-              <div className="inset-0 absolute w-full bg-gradient-to-t from-black via-black/10 to-transparent z-10 group-hover:from-transparent  " />
+        {/* Video 2 arriba */}
+        <article className="lg:col-span-2 lg:row-span-3 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+          <a
+            href="/work/barbershops"
+            className="group relative block h-full w-full"
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+            >
+              <source src="      https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/barbershop1_o7qvdp" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 rounded-2xl" />
+            <div className="absolute bottom-0 p-4 z-20">
+              <p className="text-2xl font-semibold text-white mb-2">barbershops</p>
+              <button className="bg-[#965D24] hover:bg-[#dfb968] p-2 text-sm font-semibold uppercase rounded-md">
+                See barbershops work
+              </button>
+            </div>
+          </a>
+        </article>
 
-              <div className="inset-0 absolute w-full rounded-xl">
-                <video autoPlay muted loop playsInline className="h-full w-full object-cover video" id={`video-${b.title}`}>
-                  <source src={b.video} />
-                </video>
-              </div>
-              <div className="z-50 p-2 flex flex-col mx-auto ">
-
-                <p className="mb-4 text-center text-3xl">{b.title}</p>
-                <button className="bg-[#965D24] hover:bg-[#dfb968] p-4 text-sm cursor-pointer w-full uppercase font-bold">
-                  See {b.title} work
-                </button>
-              </div>
-            </a>
-          </article>
-        ))}
+        {/* Video 3 abajo */}
+        <article className="lg:col-span-2 lg:row-span-3 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+          <a
+            href="/work/other"
+            className="group relative block h-full w-full"
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+            >
+              <source src="      https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 rounded-2xl" />
+            <div className="absolute bottom-0 p-4 z-20">
+              <p className="text-2xl font-semibold text-white mb-2">other</p>
+              <button className="bg-[#965D24] hover:bg-[#dfb968] p-2 text-sm font-semibold uppercase rounded-md">
+                See other work
+              </button>
+            </div>
+          </a>
+        </article>
       </div>
-
 
     </section>
   );
 }
-
 

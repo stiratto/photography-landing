@@ -1,4 +1,4 @@
-import { CircleQuestionMark, Utensils } from "lucide-react";
+import { CircleQuestionMark, Utensils, MoveUpRight } from "lucide-react";
 import { useEffect } from "react";
 import { toast } from "sonner";
 
@@ -16,54 +16,43 @@ const Home = () => {
 			localStorage.removeItem("form_submitted")
 		}
 	}, [])
+
 	return (
 		<div className="text-center w-full h-screen relative px-4 text-white">
-			<div className="bg-black/70 w-full h-full absolute top-0 left-0 z-10 p-0"></div>
-
+			<div className="bg-black/60 w-full h-full absolute top-0 left-0 z-10 p-0"></div>
 			<div className="absolute top-0 left-0 w-full h-full z-0 flex">
-				<video autoPlay muted loop className="md:w-1/2 h-full object-cover">
-					<source src="/videos/barbershop1.mp4" type="video/mp4" />
-				</video>
-				<video autoPlay muted loop className="hidden md:block md:w-1/2 md:h-full md:object-cover">
+				<video autoPlay muted loop className="hidden md:block w-full md:h-full object-cover">
 					<source src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4" type="video/mp4" />
 				</video>
 			</div>
 
 			<div
-				className="flex flex-col items-center justify-around w-full h-full z-50 relative"
+				className="flex flex-col md:flex-row justify-between items-start w-full h-full z-50 relative"
 			>
-				<h1
-					className="mt-24 font-extrabold text-[clamp(3rem,4vw,5rem)] text-[#DFB968] uppercase text-left"
-				>
-					Leon Photography
-				</h1>
-				<p
-					className="relative text-sm uppercase mt-8 max-w-sm text-left text-gray-500 border-b-1 border-gray-500"
-				>
-					Videos, websites, social media, branding delivery apps — everything your
-					business needs
-				</p>
+				<div className="flex flex-col justify-center items-center w-full h-full">
+					<h1
+						className="!font-fancy font-extrabold text-[clamp(3rem,4vw,5rem)] text-[#DFB968] font-normal text-left"
+					>
+						Crafting the visual <br /> side of your business
+					</h1>
+				</div>
 				<div
 					className="flex flex-col lg:flex-row items-center justify-around w-full h-full z-50 relative"
 				>
-					<div>
-						<p className="text-sm/8 md:text-xl/8 max-w-xl text-left">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae nobis
-							facilis est corporis, perferendis aperiam maiores quidem ullam!
-						</p>
-					</div>
 					<div className="">
-						<h2 className="text-4xl uppercase mb-4">What's your business?</h2>
+						<h2 className="text-4xl mb-4">what's your business?</h2>
 						<div className="flex flex-col gap-4">
 							<a
 								href="https://form.typeform.com/to/jfXTmXan"
 								target="_blank"
-								className="bg-[#965D24] p-4 text-sm flex gap-2 items-center cursor-pointer hover:bg-[#DFB968]"
-							><Utensils /> Restaurant</a
+								className="bg-[#965D24] p-4 text-sm flex gap-2 items-center cursor-pointer hover:bg-[#DFB968] rounded-lg"
+							><Utensils /> Restaurant
+
+							</a
 							>
 							<a
 								href="/form"
-								className="bg-[#965D24] p-4 text-sm flex gap-2 items-center cursor-pointer hover:bg-[#DFB968]"
+								className="bg-[#965D24] p-4 text-sm flex gap-2 items-center cursor-pointer hover:bg-[#DFB968] rounded-lg"
 							><CircleQuestionMark /> Other
 							</a>
 						</div>

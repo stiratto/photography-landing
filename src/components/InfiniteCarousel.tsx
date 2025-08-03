@@ -53,7 +53,10 @@ const InfiniteCarousel = () => {
 
   return (
     <div className="flex flex-col items-center py-18 space-y-8 max-w-[100vw] text-white">
-      <h1 className="text-4xl md:text-5xl mx-4 text-black">businesses <span className="bg-[#965d24] text-white">we've worked</span> with</h1>
+      <div className="px-24 flex flex-col self-start gap-8 w-full">
+        <span className="text-5xl font-fancy text-black self-start">03</span>
+        <h1 className="font-fancy text-4xl md:text-5xl  self-center text-black">voices we've <span className="bg-[#965d24] text-white"> helped amplify </span></h1>
+      </div>
       <div className="">
         <Splide options={splideOptions} extensions={{ AutoScroll }} className="max-w-[100vw]">
           {items.map((item, index) => (

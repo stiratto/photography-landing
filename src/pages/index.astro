@@ -1,4 +1,5 @@
 ---
+import Text2 from "@/components/Text2.astro";
 import Home from "@/components/Home";
 import Layout from "../layouts/Layout.astro";
 import InfiniteCarousel from "@/components/InfiniteCarousel";
@@ -7,17 +8,23 @@ import OurWork from "@/components/OurWork";
 
 <Layout>
 	<Home client:load />
-	<div
-		class="py-24 text-4xl md:text-5xl max-w-5xl flex justify-center items-center"
-	>
-		<p class="leading-14 text-[clamp(1.8rem,2vw,3rem)] px-4">
+	<div class="py-24 w-full flex flex-col px-4 md:px-24">
+		<span class="self-start text-5xl font-bold font-fancy">01</span>
+		<p class="leading-14 text-[clamp(1.8rem,2vw,3rem)] px-4 max-w-5xl self-end">
 			We don’t just shape how brands look—we shape how they live. From our home
 			in Miami, we build spaces where brands breathe culture, foster dialogue,
-			and become part of something <span class="bg-[#965d24] text-white"
-				>bigger</span
+			and become part of something <span
+				class="bg-[#965d24] text-white font-fancy">bigger</span
 			>.
 		</p>
 	</div>
+	<p
+		class="text-6xl self-center bg-[#965d24] w-full text-center text-black py-8 font-fancy"
+	>
+		Build a brand <span class="text-auto font-bold">they remember</span>
+	</p>
 	<OurWork client:load />
+
 	<InfiniteCarousel client:load />
+	<Text2 />
 </Layout>
