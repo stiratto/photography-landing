@@ -22,10 +22,10 @@ import OurWork from "@/components/OurWork";
 	</div>
 
 	<p
-		class="text-[clamp(3rem,4vw,5rem)] self-center bg-[#965d24] w-full text-center text-black py-8 font-fancy"
+		class="text-[clamp(3rem,4vw,5rem)] self-center bg-[#965d24] w-full text-center text-black py-8 font-fancy flex flex-col"
 	>
 		Build a brand <span
-			class="text-auto text-white font-bold bg-[#965d24] md:py-14 border border-[#965d24] md:relative"
+			class="text-auto text-white font-bold bg-[#965d24] py-14 border border-[#965d24] relative after:content-['📷'] after:absolute after:-top-2 after:-right-2 after:rotate-45 after:text-sm"
 			>they remember</span
 		>
 	</p>

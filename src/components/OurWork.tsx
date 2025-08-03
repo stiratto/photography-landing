@@ -38,15 +38,14 @@ export default function OurWork() {
   }, []);
 
   return (
-    <section className="min-h-screen max-w-full w-auto py-8 flex flex-col items-center gap-8 px-4 text-black px-8 md:px-24">
+    <section className="max-w-full w-auto py-8 flex flex-col justify-center items-center gap-8 px-4 text-black px-4 md:px-24">
       <span className="font-fancy text-5xl self-end">02</span>
       <h3 className="text-4xl md:text-5xl text-black font-fancy">
         your brand <span className="bg-[#965d24] text-white">captured</span>
       </h3>
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 grid-rows-6 gap-6 work-container max-w-[1440px] mx-auto px-4">
-        {/* Video principal grande (ocupa 3 columnas, 6 filas) */}
-        <article className="lg:col-span-3 lg:row-span-6 w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="grid grid-cols-1 grid-rows-none md:grid-cols-5 md:grid-rows-6 gap-6 work-container max-w-[1440px] mx-auto">
+        <article className="aspect-[9/16] md:aspect-auto md:col-span-3 md:row-span-6 w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
           <a
             href="/work/restaurants"
             className="group relative block h-full w-full"
@@ -62,7 +61,7 @@ export default function OurWork() {
             </video>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 rounded-2xl" />
             <div className="absolute bottom-0 p-6 z-20">
-              <p className="text-4xl font-bold text-white mb-4">restaurants</p>
+              <p className="text-3xl md:text-4xl font-bold text-white mb-4">restaurants</p>
               <button className="bg-[#965D24] hover:bg-[#dfb968] p-3 text-sm font-semibold uppercase rounded-md">
                 See restaurants work
               </button>
@@ -70,8 +69,7 @@ export default function OurWork() {
           </a>
         </article>
 
-        {/* Video 2 arriba */}
-        <article className="lg:col-span-2 lg:row-span-3 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+        <article className=" aspect-[9/16] md:aspect-auto md:col-span-2 md:row-span-3 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
           <a
             href="/work/barbershops"
             className="group relative block h-full w-full"
@@ -96,7 +94,7 @@ export default function OurWork() {
         </article>
 
         {/* Video 3 abajo */}
-        <article className="lg:col-span-2 lg:row-span-3 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+        <article className="aspect-[9/16] md:aspect-auto md:col-span-2 md:row-span-3 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
           <a
             href="/work/other"
             className="group relative block h-full w-full"

@@ -3,15 +3,14 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-  <main class="min-h-screen py-24 px-4 relative bg-black text-white w-full">
-    <div class="absolute inset-0 z-10 bg-black/80"></div>
-
+  <main class="min-h-screen py-24 px-4 relative text-white w-full">
     <div class="relative z-20">
-      <div class="videos grid grid-cols-6 grid-rows-2 gap-6 max-w-7xl mx-auto">
+      <div class="videos grid grid-cols-6 grid-rows-2 gap-6 mx-auto">
         <video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_C8C81FB6-F695-4595-91F9-AF1F67A17B0E_klfsdg.mp4"
           autoplay
           muted
+          controls
           loop
           playsinline
           class="rounded-xl shadow-xl col-span-3 row-span-2 w-full h-full object-cover"
@@ -19,6 +18,7 @@ import Layout from "@/layouts/Layout.astro";
 
         <video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_BAE672AA-DD70-4F4E-B649-425B25330F4D_f1vtb4.mp4"
+          controls
           autoplay
           muted
           loop
@@ -28,6 +28,7 @@ import Layout from "@/layouts/Layout.astro";
 
         <video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_91B9103D-9D80-4CFB-87DA-7926E24A22AD_yca8e5.mp4"
+          controls
           autoplay
           muted
           loop
@@ -38,12 +39,14 @@ import Layout from "@/layouts/Layout.astro";
         <video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_573B2327-A889-4BEF-AF6D-8364B0C3565E_fizguf.mp4"
           autoplay
+          controls
           muted
           loop
           playsinline
           class="rounded-xl shadow-xl col-span-2 row-span-1 w-full h-full object-cover"
         ></video>
         <video
+          controls
           autoplay
           muted
           loop

@@ -21,7 +21,7 @@ const Home = () => {
 		<div className="text-center w-full h-screen relative px-4 text-white">
 			<div className="bg-black/60 w-full h-full absolute top-0 left-0 z-10 p-0"></div>
 			<div className="absolute top-0 left-0 w-full h-full z-0 flex">
-				<video autoPlay muted loop className="hidden md:block w-full md:h-full object-cover">
+				<video autoPlay muted loop className="block w-full md:h-full object-cover">
 					<source src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4" type="video/mp4" />
 				</video>
 			</div>
@@ -31,7 +31,7 @@ const Home = () => {
 			>
 				<div className="flex flex-col justify-center items-center w-full h-full">
 					<h1
-						className="!font-fancy font-extrabold text-[clamp(3rem,4vw,5rem)] text-[#DFB968] font-normal text-left"
+						className="!font-fancy font-extrabold text-[clamp(3rem,5vw,5rem)] text-[#DFB968] font-normal text-left"
 					>
 						Crafting the visual <br /> side of your business
 					</h1>

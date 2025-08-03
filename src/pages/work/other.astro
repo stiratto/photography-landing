@@ -3,14 +3,13 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-  <main class="min-h-screen py-24 px-4 relative bg-black text-white w-full">
-    <div class="absolute inset-0 z-10 bg-black/80"></div>
-
+  <main class="min-h-screen py-24 px-4 relative text-white w-full">
     <div class="relative z-20">
-      <div class="videos grid grid-cols-6 grid-rows-2 gap-6 max-w-7xl mx-auto">
+      <div class="videos grid grid-cols-6 grid-rows-2 gap-6 mx-auto">
         <video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4"
           autoplay
+          controls
           muted
           loop
           playsinline
@@ -19,6 +18,7 @@ import Layout from "@/layouts/Layout.astro";
 
         <video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/realtor1_e8eueg.mp4"
+          controls
           autoplay
           muted
           loop

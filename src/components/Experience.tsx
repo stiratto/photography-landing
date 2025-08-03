@@ -3,7 +3,7 @@ import '@splidejs/react-splide/css';
 import '@splidejs/react-splide/css/core';
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
-const InfiniteCarousel = () => {
+const Experience = () => {
   const splideOptions: Options = {
     type: "loop",
     autoScroll: {
@@ -53,7 +53,7 @@ const InfiniteCarousel = () => {
 
   return (
     <div className="flex flex-col items-center py-18 space-y-8 max-w-[100vw] text-white">
-      <div className="px-24 flex flex-col self-start gap-8 w-full">
+      <div className="px-4 md:px-24 flex flex-col self-start gap-8 w-full">
         <span className="text-5xl font-fancy text-black self-start">03</span>
         <h1 className="font-fancy text-4xl md:text-5xl  self-center text-black">voices we've <span className="bg-[#965d24] text-white"> helped amplify </span></h1>
       </div>
@@ -70,4 +70,4 @@ const InfiniteCarousel = () => {
   )
 }
 
-export default InfiniteCarousel
+export default Experience

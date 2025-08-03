@@ -8,7 +8,7 @@ export const NavItems = [
     href: '/work/restaurants'
   },
   {
-    text: 'other 🔥 stuff',
+    text: 'other stuff',
     href: '/work/other'
   }
 ]
