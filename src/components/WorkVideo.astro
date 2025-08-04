@@ -1,7 +1,10 @@
 ---
+import VideoObserver from "./VideoObserver";
+
 const { src } = Astro.props;
 ---
 
+<VideoObserver client:load />
 <video
   autoplay
   muted
