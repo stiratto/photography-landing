@@ -8,7 +8,19 @@ export const NavItems = [
     href: '/work/restaurants'
   },
   {
-    text: 'other stuff',
-    href: '/work/other'
+    text: 'real estate',
+    href: '/work/real-estate'
+  },
+  {
+    text: 'construction',
+    href: '/work/construction'
+  },
+   {
+    text: 'our work',
+    href: '/work'
+  },
+   {
+    text: 'what we do',
+    href: '/whatwedo'
   }
 ]

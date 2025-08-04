@@ -5,8 +5,9 @@ const { src } = Astro.props;
 <video
   autoplay
   muted
-  preload="metadata"
+  preload="none"
   loop
+  controls
   playsinline
   class="h-screen"
   src={src}></video>

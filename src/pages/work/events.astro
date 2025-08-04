@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import OurWorkTitle from "@/components/OurWorkTitle.astro";
+import Video from "@/components/WorkVideo.astro";
+import { PartyPopper } from "lucide-react";
+---
+
+<Layout>
+  <main class="min-h-screen py-24 px-4 relative text-white w-full">
+    <OurWorkTitle
+      title="Events"
+      description="Recaps, cinematic highlights, vertical reels for promo, and full event coverage."
+      icon={PartyPopper}
+    />
+    <div class="relative z-20">
+      <div class="videos grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
+        <Video
+          src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_F07EEFD1-3093-4539-8951-CE01D82EB646_1_hyo9az.mp4"
+        />
+      </div>
+    </div>
+  </main>
+</Layout>

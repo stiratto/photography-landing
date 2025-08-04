@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import OurWorkTitle from "@/components/OurWorkTitle.astro";
 import Video from "@/components/WorkVideo.astro";
+import { Scissors } from "lucide-react";
 ---
 
 <Layout>
@@ -10,8 +11,8 @@ import Video from "@/components/WorkVideo.astro";
   >
     <OurWorkTitle
       title="barbershops"
-      description="Discover sharp, high-impact visuals tailored for barbershops and grooming brands. Crafted to showcase precision, style, and character in every frame."
-      icon="https://res.cloudinary.com/dhixihrqm/image/upload/barber-pole_1005643_fotcjk.png"
+      description="Clean visuals. Bold branding. We showcase your craft with videos and photos that capture attention and bring in new clients."
+      icon={Scissors}
     />
     <div class="relative z-20">
       <div
@@ -52,27 +53,3 @@ import Video from "@/components/WorkVideo.astro";
     transform: scale(1.02);
   }
 </style>
-
-<script>
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.5, // Al menos 50% visible
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      const video = entry.target;
-
-      if (entry.isIntersecting) {
-        video.playbackRate = video.matches(":hover") ? 1 : 0.3;
-        video.play().catch(() => {});
-      } else {
-        video.pause();
-      }
-    }
-  }, options);
-
-  const videos = document.querySelectorAll<HTMLVideoElement>(".videos video");
-  videos.forEach((video) => observer.observe(video));
-</script>

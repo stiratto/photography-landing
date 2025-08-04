@@ -2,22 +2,18 @@
 import Layout from "@/layouts/Layout.astro";
 import OurWorkTitle from "@/components/OurWorkTitle.astro";
 import Video from "@/components/WorkVideo.astro";
-import { Camera } from "lucide-react";
+import { House } from "lucide-react";
 ---
 
 <Layout>
   <main class="min-h-screen py-24 px-4 relative text-white w-full">
     <OurWorkTitle
-      title="Other beautiful stuff"
-      description="Explore a curated selection of visuals that go beyond the ordinary — crafted to elevate brands, ideas, and moments with style and intention."
-      icon={Camera}
+      title="Real Estate"
+      description="Property listings, drone videos, walkthroughs, and social content that helps sell."
+      icon={House}
     />
     <div class="relative z-20">
       <div class="videos grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
-        <Video
-          src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4"
-        />
-
         <Video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/realtor1_e8eueg.mp4"
         />
@@ -42,16 +38,5 @@ import { Camera } from "lucide-react";
   // Set the second video (realtor video) to start at 20 seconds
   if (videos[1]) {
     videos[1].currentTime = 20;
-  }
-
-  for (const video of videos) {
-    video.playbackRate = 0.3;
-    video.addEventListener("mouseover", () => {
-      video.playbackRate = 1;
-      video.play();
-    });
-    video.addEventListener("mouseleave", () => {
-      video.playbackRate = 0.3;
-    });
   }
 </script>

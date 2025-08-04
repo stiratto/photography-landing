@@ -1,0 +1,136 @@
+import { CircleQuestionMark, Utensils, ArrowRight, Camera, Sparkles } from "lucide-react";
+import { useEffect } from "react";
+import { toast } from "sonner";
+
+const Home = () => {
+	useEffect(() => {
+		if (localStorage.getItem("form_submitted") === "true") {
+			toast("The form was sent! We will try to contact you as soon as possible :)", {
+				style: {
+					backgroundColor: '#965d24',
+					color: 'white',
+					borderRadius: 0,
+					border: 0
+				}
+			})
+			setTimeout(() => { }, 1000)
+			localStorage.removeItem("form_submitted")
+		}
+	}, [])
+
+	return (
+		<div className="text-center w-full h-screen relative px-4 text-white">
+			<div className="bg-black/60 w-full h-full absolute top-0 left-0 z-10 p-0"></div>
+			<div className="absolute top-0 left-0 w-full h-full z-0 flex justify-center items-center gap-4">
+				<video
+					autoPlay
+					muted
+					preload="none"
+					loop
+					playsInline
+					className="object-cover md:object-contain h-full md:max-w-[28%]">
+					<source
+						src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4"
+						type="video/mp4"
+					/>
+				</video>
+				<video
+					autoPlay
+					muted
+					preload="none"
+					loop
+					playsInline
+					className="hidden md:block h-full max-w-[28%] ">
+					<source
+						src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_5A209BF6-7F9D-4DCB-A63B-39164071EB9F_xy7r9i.mp4"
+						type="video/mp4"
+					/>
+				</video>
+				<video
+					autoPlay
+					muted
+					preload="none"
+					loop
+					playsInline className="hidden md:block h-full max-w-[28%] ">
+					<source
+						src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4"
+						type="video/mp4"
+					/>
+				</video>
+			</div>
+
+
+
+			<div
+				className="flex flex-col md:flex-row justify-between items-start w-full h-full z-50 relative"
+			>
+				<div className="flex flex-col justify-center items-center w-full h-full">
+					<h1
+						className="!font-fancy font-extrabold text-[clamp(2rem,5vw,5rem)] text-[#DFB968] font-normal text-left"
+					>
+						Crafting the visual <br /> side of your business
+					</h1>
+					<p className="text-lg text-white/90 max-w-2xl mt-6 text-center leading-relaxed">
+						Transform your brand with stunning visuals that convert browsers into customers.
+						Professional photography and videography that tells your story.
+					</p>
+				</div>
+				<div
+					className="flex flex-col lg:flex-row items-center justify-around w-full h-full z-50 relative"
+				>
+					<div className="max-w-md">
+						{/* Primary CTA Section */}
+						<div className="mb-8">
+							<h2 className="text-3xl font-bold mb-2 text-[#DFB968]">Ready to elevate your brand?</h2>
+							<p className="text-white/80 mb-6">Get a free consultation and see how we can transform your business visuals.</p>
+							<h3 className="text-xl mb-4 text-white/90">Choose your business type:</h3>
+							<div className="flex flex-col gap-3">
+
+								<a
+									href="https://form.typeform.com/to/jfXTmXan"
+									target="_blank"
+									className="bg-[#965D24] hover:bg-[#DFB968] transition-all duration-300 p-3 text-sm flex gap-3 items-center cursor-pointer rounded-lg group"
+								>
+									<Utensils className="" />
+									Restaurant & Food Service
+									<ArrowRight size={16} className="ml-auto group-hover:translate-x-1 transition-transform" />
+								</a>
+
+								<a
+									href="/form"
+									className="bg-[#965D24] hover:bg-[#DFB968] transition-all duration-300 p-3 text-sm flex gap-3 items-center cursor-pointer rounded-lg group"
+								>
+									<CircleQuestionMark className="" />
+									Other Business Type
+									<ArrowRight size={16} className="ml-auto group-hover:translate-x-1 transition-transform" />
+								</a>
+							</div>
+
+						</div>
+
+						{/* Business Type Selection */}
+
+						<div className="border-t border-white/20 pt-6">
+
+							<a
+								href="/work"
+								className="bg-[#DFB968] hover:bg-[#965D24] transition-all duration-300 p-4 px-8 text-lg font-semibold flex gap-3 items-center cursor-pointer rounded-lg group shadow-lg"
+							>
+								Explore our work
+								<ArrowRight className="group-hover:translate-x-1 transition-transform" />
+							</a>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	)
+}
+
+
+export default Home

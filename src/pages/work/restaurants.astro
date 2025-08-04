@@ -11,7 +11,7 @@ import Video from "@/components/WorkVideo.astro";
   >
     <OurWorkTitle
       title="restaurants"
-      description="      Discover high-quality food content for restaurants, delivery services and branding campaigns. These visuals are crafted to highlight flavor, style and story."
+      description="Content that makes people crave. We create viral food videos, manage your delivery apps, and boost your online visibility."
       icon={Utensils}
     />
     <div class="z-20 w-full mx-auto">
@@ -47,18 +47,3 @@ import Video from "@/components/WorkVideo.astro";
     transform: scale(1.02);
   }
 </style>
-
-<script>
-  const videos = document.querySelectorAll<HTMLVideoElement>(".videos video");
-
-  for (const video of videos) {
-    video.playbackRate = 0.3;
-    video.addEventListener("mouseover", () => {
-      video.playbackRate = 1;
-      video.play();
-    });
-    video.addEventListener("mouseleave", () => {
-      video.playbackRate = 0.3;
-    });
-  }
-</script>

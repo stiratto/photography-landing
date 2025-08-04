@@ -1,0 +1,41 @@
+---
+import WorkHomeCard from "@/components/Home/WorkHomeCard.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="w-full py-24 px-4 relative">
+    <h1
+      class="text-[clamp(2rem,3vw,5rem)] font-bold text-center my-8 font-fancy text-[#dfb968]"
+    >
+      Our work
+    </h1>
+    <section
+      class="grid grid-cols-1 lg:grid-cols-6 lg:grid-rows-6 gap-8 work-container max-w-[1440px] mx-auto"
+    >
+      <WorkHomeCard
+        work="restaurants"
+        to="restaurants"
+        bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_573B2327-A889-4BEF-AF6D-8364B0C3565E_fizguf.mp4"
+      />
+
+      <WorkHomeCard
+        work="barbershops"
+        to="barbershops"
+        bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_60279528-3A99-42EC-801F-787D73FD1D7B_kovyxx.mp4"
+      />
+
+      <WorkHomeCard
+        work="realtor"
+        to="realtor"
+        bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/realtor1_e8eueg.mp4"
+      />
+
+      <WorkHomeCard
+        work="construction"
+        bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_573B2327-A889-4BEF-AF6D-8364B0C3565E_fizguf.mp4"
+        to="construction"
+      />
+    </section>
+  </main>
+</Layout>
