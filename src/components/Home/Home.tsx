@@ -27,6 +27,7 @@ const Home = () => {
 					muted
 					preload="none"
 					loop
+					poster="https://res.cloudinary.com/dhixihrqm/image/upload/ff537d6f-6df9-4041-85b8-41c23f2e9984.png"
 					playsInline
 					className="object-cover md:object-contain h-full md:max-w-[28%]">
 					<source
