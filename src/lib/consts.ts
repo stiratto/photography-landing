@@ -15,10 +15,15 @@ export const NavItems = [
     text: 'construction',
     href: '/work/construction'
   },
+    {
+    text: 'other work',
+    href: '/work/other'
+  },
    {
     text: 'our work',
     href: '/work'
   },
+  
    {
     text: 'what we do',
     href: '/whatwedo'
