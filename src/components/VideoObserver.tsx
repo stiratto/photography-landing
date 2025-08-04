@@ -7,14 +7,12 @@ const VideoObserver = () => {
         const observer = new IntersectionObserver((entries) => {
             for (const entry of entries) {
                 const video = entry.target as HTMLVideoElement;
-                if (entry.isIntersecting) {
-                    video.play().catch(() => { });
-                } else {
-                    video.pause();
+                if (!entry.isIntersecting) {
+                    video.pause()
                 }
             }
         }, {
-            threshold: 0.5, // Puedes ajustar esto si quieres que se active antes o después
+            threshold: 0.7,
         });
 
         videos.forEach((video) => observer.observe(video));
@@ -22,7 +20,7 @@ const VideoObserver = () => {
         return () => observer.disconnect();
     }, []);
 
-    return null; // No renderiza nada visual
+    return null;
 };
 
 export default VideoObserver;
