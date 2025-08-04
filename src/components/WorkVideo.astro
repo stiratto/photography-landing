@@ -1,0 +1,12 @@
+---
+const { src } = Astro.props;
+---
+
+<video
+  autoplay
+  muted
+  preload="metadata"
+  loop
+  playsinline
+  class="h-screen"
+  src={src}></video>

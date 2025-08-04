@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import OurWorkTitle from "@/components/OurWorkTitle.astro";
-import { Laugh } from "lucide-react";
+import Video from "@/components/WorkVideo.astro";
 ---
 
 <Layout>
@@ -17,57 +17,27 @@ import { Laugh } from "lucide-react";
       <div
         class="grid grid-cols-1 md:grid-cols-2 videos flex flex-col justify-center items-center gap-6 items-stretch"
       >
-        <video
-          autoplay
-          muted
-          preload="metadata"
-          loop
-          playsinline
-          class="w-auto"
-          src="https://res.cloudinary.com/dhixihrqm/video/upload/copy_5A209BF6-7F9D-4DCB-A63B-39164071EB9F_xy7r9i.mp4"
-        ></video>
-        <video
-          src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_D756B920-CA6B-4CCE-99E3-8F2BC2EFDEBA_ihp4k7.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-          class="h-screen h-full"></video>
+        <Video
+          src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_5A209BF6-7F9D-4DCB-A63B-39164071EB9F_xy7r9i.mp4"
+        />
 
-        <video
+        <Video
+          src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_D756B920-CA6B-4CCE-99E3-8F2BC2EFDEBA_ihp4k7.mp4"
+        />
+
+        <Video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_F653CC36-2930-4403-824D-55C3A66ADE96_gkjkkn_dqq9g0.mp4"
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          playsinline
-          class="h-screen w-full"></video>
-        <video
+        />
+        <Video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_56355113-F99E-4DA0-A5E7-34BAF678751D_o0yw8i.mp4"
-          autoplay
-          muted
-          preload="metadata"
-          loop
-          playsinline
-          class="h-screen"></video>
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-          class="h-screen"
+        />
+        <Video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_89F0A062-AB5C-4E6B-967E-111CC953103A_fm6qxe.mp4"
-        ></video>
-        <video
+        />
+
+        <Video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/barbershop1_o7qvdp"
-          autoplay
-          muted
-          preload="metadata"
-          loop
-          playsinline
-          class=""></video>
+        />
       </div>
     </div>
   </main>

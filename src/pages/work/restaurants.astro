@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import { Utensils } from "lucide-react";
 import OurWorkTitle from "@/components/OurWorkTitle.astro";
+import Video from "@/components/WorkVideo.astro";
 ---
 
 <Layout>
@@ -15,44 +16,23 @@ import OurWorkTitle from "@/components/OurWorkTitle.astro";
     />
     <div class="z-20 w-full mx-auto">
       <div class="videos gap-6 mx-auto grid grid-cols-1 md:grid-cols-2">
-        <video
+        <Video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_C8C81FB6-F695-4595-91F9-AF1F67A17B0E_klfsdg.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          class="w-full h-screen"></video>
-        <video
+        />
+        <Video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_BAE672AA-DD70-4F4E-B649-425B25330F4D_f1vtb4.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          class="w-full h-screen"></video>
+        />
 
-        <video
+        <Video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_91B9103D-9D80-4CFB-87DA-7926E24A22AD_yca8e5.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          class="w-full h-screen"></video>
+        />
 
-        <video
+        <Video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_573B2327-A889-4BEF-AF6D-8364B0C3565E_fizguf.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          class="w-full h-screen"></video>
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          class="h-screen"
+        />
+        <Video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/comida2_bm5nym.mp4"
-        ></video>
+        />
       </div>
     </div>
   </main>
