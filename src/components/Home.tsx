@@ -1,9 +1,10 @@
-import { CircleQuestionMark, Utensils, MoveUpRight } from "lucide-react";
+import { CircleQuestionMark, Utensils } from "lucide-react";
 import { useEffect } from "react";
 import { toast } from "sonner";
 
 const Home = () => {
 	useEffect(() => {
+
 		if (localStorage.getItem("form_submitted") === "true") {
 			toast("The form was sent! We will try to contact you as soon as possible :)", {
 				style: {
@@ -13,6 +14,7 @@ const Home = () => {
 					border: 0
 				}
 			})
+			setTimeout(() => { }, 1000)
 			localStorage.removeItem("form_submitted")
 		}
 	}, [])
