@@ -19,7 +19,7 @@ const Home = () => {
 	}, [])
 
 	return (
-		<div className="text-center w-full h-screen relative px-4 text-white">
+		<div className="text-center w-full h-screen relative px-4 text-white py-8">
 			<div className="bg-black/60 w-full h-full absolute top-0 left-0 z-10 p-0"></div>
 			<div className="absolute top-0 left-0 w-full h-full z-0 flex justify-center items-center gap-4">
 				<video
@@ -72,8 +72,8 @@ const Home = () => {
 						Crafting the visual <br /> side of your business
 					</h1>
 					<p className="text-lg text-white/90 max-w-2xl mt-6 text-center leading-relaxed">
-						Transform your brand with stunning visuals that convert browsers into customers.
-						Professional photography and videography that tells your story.
+						We are a creative agency focused on crafting high-quality, viral visual content and digital marketing strategies that elevate any business in the online world.
+
 					</p>
 				</div>
 				<div
