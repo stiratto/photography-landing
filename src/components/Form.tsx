@@ -38,7 +38,7 @@ const OtherForm = () => {
 
   const onSubmit: SubmitHandler<TOtherFormSchema> = async (data) => {
     setLoading(true)
-    let { first_name, description, phone_number, city, email, second_name, business_instagram } = data
+    let { description, phone_number } = data
     if (!phone_number) {
       data.phone_number = ''
     }
@@ -58,13 +58,13 @@ const OtherForm = () => {
   return (
     <main className=" min-h-screen flex flex-col justify-center items-center w-full">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-xl">
-          <div className="flex flex-col md:flex-row items-center gap-4 w-full justify-between">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-xl flex flex-col px-4">
+          <div className="flex flex-col md:flex-row md:items-center gap-4 w-full justify-between">
             <FormField name='first_name' render={({ field }) => (
-              <FormItem>
+              <FormItem className="w-full">
                 <Label className="text-[#737373]">First name <span className="text-red-500">*</span></Label>
                 <FormControl>
-                  <Input placeholder="Carlos" {...field} className="border-[#965d24] rounded-none" />
+                  <Input placeholder="Carlos" {...field} className="border-[#965d24] rounded-none " />
                 </FormControl>
 
               </FormItem>
@@ -72,7 +72,7 @@ const OtherForm = () => {
 
 
             <FormField name='second_name' render={({ field }) => (
-              <FormItem>
+              <FormItem className="w-full">
                 <Label className="text-[#737373]">Second name<span className="text-red-500">*</span></Label>
                 <FormControl>
                   <Input placeholder="Andres" {...field} className="border-[#965d24] rounded-none" />

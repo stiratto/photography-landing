@@ -1,0 +1,29 @@
+---
+const { title, icon: Icon, description } = Astro.props;
+import Line from "@/components/Line.astro";
+---
+
+<Line />
+
+<div
+  class="text-black flex flex-col md:flex-row items-center justify-around px-6 md:px-24 gap-6 md:gap-12"
+>
+  <div class="border-4 border-black p-6 rounded-full shadow-lg">
+    <Icon size={80} strokeWidth={1.5} />
+  </div>
+
+  <div class="flex flex-col items-end text-right max-w-xl">
+    <span class="font-fancy bg-[#965d24] px-2 text-white">our work</span>
+    <h1 class="font-fancy text-5xl md:text-7xl text-black px-4 py-2">
+      {title}
+    </h1>
+    <p class="mt-4 text-lg md:text-xl text-neutral-700 max-w-prose">
+      {description}
+    </p>
+    <span class="text-sm text-neutral-700 mt-8"
+      >Hover to play. Tap to focus on mobile.</span
+    >
+  </div>
+</div>
+
+<Line />

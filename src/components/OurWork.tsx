@@ -62,7 +62,7 @@ export default function OurWork() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 rounded-2xl" />
             <div className="absolute bottom-0 p-6 z-20">
               <p className="text-3xl md:text-4xl font-bold text-white mb-4">restaurants</p>
-              <button className="bg-[#965D24] hover:bg-[#dfb968] p-3 text-sm font-semibold uppercase rounded-md">
+              <button className="cursor-pointer text-white bg-[#965D24] hover:bg-[#dfb968] p-3 text-sm font-semibold uppercase rounded-md">
                 See restaurants work
               </button>
             </div>
@@ -86,7 +86,7 @@ export default function OurWork() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 rounded-2xl" />
             <div className="absolute bottom-0 p-4 z-20">
               <p className="text-2xl font-semibold text-white mb-2">barbershops</p>
-              <button className="bg-[#965D24] hover:bg-[#dfb968] p-2 text-sm font-semibold uppercase rounded-md">
+              <button className="cursor-pointer text-white bg-[#965D24] hover:bg-[#dfb968] p-2 text-sm font-semibold uppercase rounded-md">
                 See barbershops work
               </button>
             </div>
@@ -111,7 +111,7 @@ export default function OurWork() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 rounded-2xl" />
             <div className="absolute bottom-0 p-4 z-20">
               <p className="text-2xl font-semibold text-white mb-2">other</p>
-              <button className="bg-[#965D24] hover:bg-[#dfb968] p-2 text-sm font-semibold uppercase rounded-md">
+              <button className="cursor-pointer text-white bg-[#965D24] hover:bg-[#dfb968] p-2 text-sm font-semibold uppercase rounded-md">
                 See other work
               </button>
             </div>

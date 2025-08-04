@@ -1,68 +1,67 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import OurWorkTitle from "@/components/OurWorkTitle.astro";
+import { Laugh } from "lucide-react";
 ---
 
 <Layout>
-  <main class="min-h-screen py-24 px-4 relative text-white w-full">
+  <main
+    class="min-h-screen py-24 px-4 relative text-white w-full max-w-[100vw] flex flex-col"
+  >
+    <OurWorkTitle
+      title="barbershops"
+      description="Discover sharp, high-impact visuals tailored for barbershops and grooming brands. Crafted to showcase precision, style, and character in every frame."
+      icon={Laugh}
+    />
     <div class="relative z-20">
-      <div class="videos grid grid-cols-6 grid-rows-2 gap-6 mx-auto">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 videos flex flex-col justify-center items-center gap-6 items-stretch"
+      >
         <video
-          src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/barbershop1_o7qvdp"
           autoplay
-          controls
           muted
           loop
           playsinline
-          class="rounded-xl shadow-xl col-span-3 row-span-2 w-full h-full object-cover"
+          class="h-screen flex-grow"
+          src="https://res.cloudinary.com/dhixihrqm/video/upload/copy_5A209BF6-7F9D-4DCB-A63B-39164071EB9F_xy7r9i.mp4"
         ></video>
-
         <video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_D756B920-CA6B-4CCE-99E3-8F2BC2EFDEBA_ihp4k7.mp4"
           autoplay
           muted
-          controls
           loop
           playsinline
-          class="rounded-xl shadow-xl col-span-3 row-span-4 w-full h-full object-cover"
-        ></video>
+          class="h-screen h-full"></video>
 
         <video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_F653CC36-2930-4403-824D-55C3A66ADE96_gkjkkn_dqq9g0.mp4"
           autoplay
           muted
-          controls
           loop
           playsinline
-          class="rounded-xl shadow-xl col-span-6 md:col-span-3 md:row-span-2 w-full h-full object-cover"
-        ></video>
-
+          class="h-screen w-full"></video>
         <video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_56355113-F99E-4DA0-A5E7-34BAF678751D_o0yw8i.mp4"
           autoplay
-          controls
           muted
           loop
           playsinline
-          class="rounded-xl shadow-xl col-span-6 row-span-4 w-full h-full object-cover"
-        ></video>
+          class="h-screen"></video>
         <video
           autoplay
-          controls
           muted
           loop
           playsinline
-          class="w-full rounded-xl shadow-xl col-span-3 row-span-2 w-full h-full object-cover"
+          class="h-screen"
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_89F0A062-AB5C-4E6B-967E-111CC953103A_fm6qxe.mp4"
         ></video>
         <video
-          controls
+          src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/barbershop1_o7qvdp"
           autoplay
           muted
           loop
           playsinline
-          class="w-full rounded-xl shadow-xl w-full h-full col-span-3 object-cover"
-          src="https://res.cloudinary.com/dhixihrqm/video/upload/copy_5A209BF6-7F9D-4DCB-A63B-39164071EB9F_xy7r9i.mp4"
-        ></video>
+          class=""></video>
       </div>
     </div>
   </main>
