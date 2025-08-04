@@ -20,6 +20,7 @@ import { Laugh } from "lucide-react";
         <video
           autoplay
           muted
+          preload="metadata"
           loop
           playsinline
           class="w-auto"
@@ -31,6 +32,7 @@ import { Laugh } from "lucide-react";
           muted
           loop
           playsinline
+          preload="metadata"
           class="h-screen h-full"></video>
 
         <video
@@ -38,12 +40,14 @@ import { Laugh } from "lucide-react";
           autoplay
           muted
           loop
+          preload="metadata"
           playsinline
           class="h-screen w-full"></video>
         <video
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_56355113-F99E-4DA0-A5E7-34BAF678751D_o0yw8i.mp4"
           autoplay
           muted
+          preload="metadata"
           loop
           playsinline
           class="h-screen"></video>
@@ -52,6 +56,7 @@ import { Laugh } from "lucide-react";
           muted
           loop
           playsinline
+          preload="metadata"
           class="h-screen"
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_89F0A062-AB5C-4E6B-967E-111CC953103A_fm6qxe.mp4"
         ></video>
@@ -59,6 +64,7 @@ import { Laugh } from "lucide-react";
           src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/barbershop1_o7qvdp"
           autoplay
           muted
+          preload="metadata"
           loop
           playsinline
           class=""></video>
@@ -78,16 +84,25 @@ import { Laugh } from "lucide-react";
 </style>
 
 <script>
-  const videos = document.querySelectorAll<HTMLVideoElement>(".videos video");
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Al menos 50% visible
+  };
 
-  for (const video of videos) {
-    video.playbackRate = 0.3;
-    video.addEventListener("mouseover", () => {
-      video.playbackRate = 1;
-      video.play();
-    });
-    video.addEventListener("mouseleave", () => {
-      video.playbackRate = 0.3;
-    });
-  }
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      const video = entry.target;
+
+      if (entry.isIntersecting) {
+        video.playbackRate = video.matches(":hover") ? 1 : 0.3;
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    }
+  }, options);
+
+  const videos = document.querySelectorAll<HTMLVideoElement>(".videos video");
+  videos.forEach((video) => observer.observe(video));
 </script>
