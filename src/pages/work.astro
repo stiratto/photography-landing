@@ -1,15 +1,39 @@
 ---
 import WorkHomeCard from "@/components/Home/WorkHomeCard.astro";
+import Line from "@/components/Line.astro";
 import Layout from "@/layouts/Layout.astro";
+import { Camera } from "lucide-react";
 ---
 
 <Layout>
   <main class="w-full py-24 px-4 relative">
-    <h1
-      class="text-[clamp(2rem,3vw,5rem)] font-bold text-center my-8 font-fancy text-[#dfb968]"
+    <Line />
+    <div
+      class="flex flex-col md:flex-row justify-center md:justify-around items-center text-center w-full gap-8 md:gap-0"
     >
-      Our work
-    </h1>
+      <div class="border border-4 border-[#dbdbdb] p-6 rounded-full">
+        <Camera
+          size={80}
+          strokeWidth={1}
+          className="text-[#dbdbdb] md:self-center "
+        />
+      </div>
+
+      <div class="order-1 md:order-2">
+        <h1
+          class="text-[#dbdbdb] font-fancy text-[clamp(2rem,6vw,4rem)] md:text-[clamp(3rem,4vw,5rem)] mb-4 md:mb-6"
+        >
+          Our work
+        </h1>
+        <p
+          class="text-white/70 text-base md:text-lg text-center md:text-right leading-relaxed max-w-xs md:max-w-lg"
+        >
+          A showcase of our work.
+        </p>
+      </div>
+    </div>
+    <Line />
+
     <section
       class="grid grid-cols-1 lg:grid-cols-6 lg:grid-rows-6 gap-8 work-container max-w-[1440px] mx-auto"
     >
