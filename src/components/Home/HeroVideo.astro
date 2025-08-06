@@ -1,0 +1,17 @@
+---
+const { src } = Astro.props;
+
+const webm = src.replace(/mp4/g, "webm");
+---
+
+<video
+  autoplay
+  muted
+  preload="none"
+  loop
+  playsinline
+  class="object-cover md:object-contain h-full md:max-w-[28%]"
+>
+  <source src={webm} type="video/webm" />
+  <source src={src} type="video/mp4" />
+</video>

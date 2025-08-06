@@ -1,6 +1,7 @@
 import { CircleQuestionMark, Utensils, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import { toast } from "sonner";
+import { urlMp4ToWebm } from "@/lib/utils"
 
 const Hero = () => {
 	useEffect(() => {
@@ -32,8 +33,7 @@ const Hero = () => {
 					playsInline
 					className="object-cover md:object-contain h-full md:max-w-[28%]">
 					<source
-						src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4"
-						type="video/mp4"
+						src={urlMp4ToWebm(`${import.meta.env.AWS_URL_SERVICES}/mp4/comida7.mp4`)}
 					/>
 				</video>
 				<video
@@ -44,8 +44,7 @@ const Hero = () => {
 					playsInline
 					className="hidden md:block h-full max-w-[28%] ">
 					<source
-						src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_5A209BF6-7F9D-4DCB-A63B-39164071EB9F_xy7r9i.mp4"
-						type="video/mp4"
+						src={urlMp4ToWebm(`${import.meta.env.AWS_URL_SERVICES}/mp4/barber2.mp4`)}
 					/>
 				</video>
 				<video
@@ -55,8 +54,7 @@ const Hero = () => {
 					loop
 					playsInline className="hidden md:block h-full max-w-[28%] ">
 					<source
-						src="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4"
-						type="video/mp4"
+						src={urlMp4ToWebm(`${import.meta.env.AWS_URL_SERVICES}/mp4/comida4.mp4`)}
 					/>
 				</video>
 			</div>

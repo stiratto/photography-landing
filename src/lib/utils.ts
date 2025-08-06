@@ -5,3 +5,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
+export const urlMp4ToWebm = (url: string) => {
+  if (!url) return url;
+  return url.replace(/mp4/g, "webm");
+}
