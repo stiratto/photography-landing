@@ -2,7 +2,6 @@
 import OurWorkTitle from "@/components/OurWorkTitle.astro";
 import WorkVideo from "@/components/WorkVideo.astro";
 import Layout from "@/layouts/Layout.astro";
-import { AWS_URL_SERVICES } from "@/lib/consts";
 import { Component } from "lucide-react";
 ---
 
@@ -15,8 +14,12 @@ import { Component } from "lucide-react";
     />
 
     <div>
-      <WorkVideo src={`${AWS_URL_SERVICES}/mp4/bartender1.mp4`} />
-      <WorkVideo src={`${AWS_URL_SERVICES}/mp4/bartender2.mp4`} />
+      <WorkVideo
+        src={`${import.meta.env.AWS_URL_SERVICES}/mp4/bartender1.mp4`}
+      />
+      <WorkVideo
+        src={`${import.meta.env.AWS_URL_SERVICES}/mp4/bartender2.mp4`}
+      />
     </div>
   </main>
 </Layout>
