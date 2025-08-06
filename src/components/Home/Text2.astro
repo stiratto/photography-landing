@@ -1,16 +1,17 @@
 ---
 import { MoveUpRight } from "lucide-react";
+import Button from "../Button.astro";
 ---
 
 <section class="flex flex-col px-8 md:px-24 py-24 gap-8">
   <span class="font-fancy text-5xl self-end">04</span>
   <div class="flex justify-between items-center">
     <h2
-      class="text-[clamp(1.5rem,3vw,5rem)] font-bold max-w-3xl gap-4 flex flex-col text-[#dbdbdb]"
+      class="text-[clamp(1.5rem,3vw,5rem)] font-bold max-w-3xl gap-4 flex flex-col text-light"
     >
       Ready to grow your business with viral content and smart marketing?<br /> Let’s
       talk. Fill out this short form and we’ll contact you within 24 hours.
-      <span class="text-[#965d24]"
+      <span class="text-golden"
         >But first, choose if you're a restaurant or not</span
       >
     </h2>
@@ -19,21 +20,19 @@ import { MoveUpRight } from "lucide-react";
   <ul class="flex flex-col md:flex-row gap-4 mt-8">
     <li>
       <a href="https://form.typeform.com/to/jfXTmXan" target="_blank">
-        <button
-          class="bg-[#965d24] text-white text-lg font-medium px-6 py-4 rounded-lg hover:bg-[#dfb968] transition-colors cursor-pointer flex items-center gap-4"
-        >
+        <Button>
           I'm a restaurant
           <MoveUpRight size={20} />
-        </button>
+        </Button>
       </a>
     </li>
     <li>
       <a href="/form">
-        <button
-          class="border border-[#965d24] text-[#965d24] text-lg font-medium px-6 py-4 rounded-lg hover:bg-[#dfb968] hover:text-white transition-colors cursor-pointer"
+        <Button
+          class=`border border-golden text-golden  text-lg font-medium px-6 py-4 rounded-lg hover:bg-golden2 hover:text-white transition-colors cursor-pointer`
         >
           Other
-        </button>
+        </Button>
       </a>
     </li>
   </ul>

@@ -1,8 +1,8 @@
 ---
-import WorkHomeCard from "@/components/Home/WorkHomeCard.astro";
 import Line from "@/components/Line.astro";
 import Layout from "@/layouts/Layout.astro";
 import { Camera } from "lucide-react";
+import HomeOurWorkCard from "@/components/Home/HomeOurWorkCard.astro";
 ---
 
 <Layout>
@@ -11,17 +11,17 @@ import { Camera } from "lucide-react";
     <div
       class="flex flex-col md:flex-row justify-center md:justify-around items-center text-center w-full gap-8 md:gap-0"
     >
-      <div class="border border-4 border-[#dbdbdb] p-6 rounded-full">
+      <div class="border border-4 border-light p-6 rounded-full">
         <Camera
           size={80}
           strokeWidth={1}
-          className="text-[#dbdbdb] md:self-center "
+          className="text-light md:self-center "
         />
       </div>
 
       <div class="order-1 md:order-2">
         <h1
-          class="text-[#dbdbdb] font-fancy text-[clamp(2rem,6vw,4rem)] md:text-[clamp(3rem,4vw,5rem)] mb-4 md:mb-6"
+          class="text-light font-fancy text-[clamp(2rem,6vw,4rem)] md:text-[clamp(3rem,4vw,5rem)] mb-4 md:mb-6"
         >
           Our work
         </h1>
@@ -35,27 +35,27 @@ import { Camera } from "lucide-react";
     <Line />
 
     <section
-      class="grid grid-cols-1 lg:grid-cols-6 lg:grid-rows-6 gap-8 work-container max-w-[1440px] mx-auto"
+      class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1440px] mx-auto"
     >
-      <WorkHomeCard
+      <HomeOurWorkCard
         work="restaurants"
         to="restaurants"
         bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_BAE672AA-DD70-4F4E-B649-425B25330F4D_f1vtb4.mp4"
       />
 
-      <WorkHomeCard
+      <HomeOurWorkCard
         work="barbershops"
         to="barbershops"
         bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_60279528-3A99-42EC-801F-787D73FD1D7B_kovyxx.mp4"
       />
 
-      <WorkHomeCard
+      <HomeOurWorkCard
         work="realtor"
         to="realtor"
         bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/realtor1_e8eueg.mp4"
       />
 
-      <WorkHomeCard
+      <HomeOurWorkCard
         work="construction"
         bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_F07EEFD1-3093-4539-8951-CE01D82EB646_1_hyo9az.mp4"
         to="construction"

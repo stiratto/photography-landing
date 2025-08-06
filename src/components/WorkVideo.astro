@@ -1,16 +1,13 @@
 ---
 import VideoObserver from "./VideoObserver";
 
-const { src } = Astro.props;
+const { src: mp4 } = Astro.props;
+
+const webm = mp4.replace(/mp4/g, "webm");
 ---
 
 <VideoObserver client:load />
-<video
-  autoplay
-  muted
-  preload="none"
-  loop
-  controls
-  playsinline
-  class="h-screen"
-  src={src}></video>
+<video autoplay muted preload="none" loop controls playsinline class="h-screen">
+  <source src={webm} type="video/webm" />
+  <source src={mp4} type="video/mp4" />
+</video>

@@ -1,16 +1,16 @@
 ---
-import Text2 from "@/components/Text2.astro";
-import Text1 from "@/components/Text1.astro";
-import Home from "@/components/Home/Home";
+import Text2 from "@/components/Home/Text2.astro";
+import Text1 from "@/components/Home/Text1.astro";
+import Hero from "@/components/Home/Hero";
 import Layout from "../layouts/Layout.astro";
-import Experience from "@/components/Experience";
-import OurWork from "@/components/Home/OurWork.astro";
-import BuildBanner from "@/components/BuildBanner.astro";
+import Experience from "@/components/Home/Experience";
+import OurWork from "@/components/Home/HomeOurWork.astro";
+import BuildBanner from "@/components/Home/BuildBanner.astro";
 import Line from "@/components/Line.astro";
 ---
 
 <Layout>
-  <Home client:load />
+  <Hero client:load />
   <Line />
   <Text1 />
   <BuildBanner />

@@ -1,6 +1,8 @@
 ---
 import OurWorkTitle from "@/components/OurWorkTitle.astro";
+import WorkVideo from "@/components/WorkVideo.astro";
 import Layout from "@/layouts/Layout.astro";
+import { AWS_URL_SERVICES } from "@/lib/consts";
 import { Component } from "lucide-react";
 ---
 
@@ -11,5 +13,10 @@ import { Component } from "lucide-react";
       description="We capture the value of unique businesses with photos and videos that showcase your best, no matter the industry. If you built it, sell it, or offer it — we make it stand out."
       icon={Component}
     />
+
+    <div>
+      <WorkVideo src={`${AWS_URL_SERVICES}/mp4/bartender1.mp4`} />
+      <WorkVideo src={`${AWS_URL_SERVICES}/mp4/bartender2.mp4`} />
+    </div>
   </main>
 </Layout>

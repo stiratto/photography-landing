@@ -64,7 +64,7 @@ const OtherForm = () => {
               <FormItem className="w-full">
                 <Label className="text-[#737373]">First name <span className="text-red-500">*</span></Label>
                 <FormControl>
-                  <Input placeholder="Carlos" {...field} className="border-[#965d24] rounded-none " />
+                  <Input placeholder="Carlos" {...field} className="border-golden rounded-none " />
                 </FormControl>
 
               </FormItem>
@@ -75,7 +75,7 @@ const OtherForm = () => {
               <FormItem className="w-full">
                 <Label className="text-[#737373]">Second name<span className="text-red-500">*</span></Label>
                 <FormControl>
-                  <Input placeholder="Andres" {...field} className="border-[#965d24] rounded-none" />
+                  <Input placeholder="Andres" {...field} className="border-golden rounded-none" />
                 </FormControl>
 
               </FormItem>
@@ -88,7 +88,7 @@ const OtherForm = () => {
             <FormItem>
               <Label className="text-[#737373]">Email<span className="text-red-500">*</span></Label>
               <FormControl>
-                <Input placeholder="dummyemail123@gmail.com" {...field} className="border-[#965d24] rounded-none" />
+                <Input placeholder="dummyemail123@gmail.com" {...field} className="border-golden rounded-none" />
               </FormControl>
 
             </FormItem>
@@ -100,7 +100,7 @@ const OtherForm = () => {
               <div className="flex flex-col relative">
                 <p className="absolute top-[5px] left-3 text-[#737373]">@</p>
                 <FormControl>
-                  <Input placeholder="user123" {...field} className="border-[#965d24] rounded-none pl-8" />
+                  <Input placeholder="user123" {...field} className="border-golden rounded-none pl-8" />
                 </FormControl>
               </div>
             </FormItem>
@@ -110,7 +110,7 @@ const OtherForm = () => {
             <FormItem>
               <Label className="text-[#737373]">Phone number</Label>
               <FormControl>
-                <Input placeholder="(416)555-3456" {...field} className="border-[#965d24] rounded-none" />
+                <Input placeholder="(416)555-3456" {...field} className="border-golden rounded-none" />
               </FormControl>
 
             </FormItem>
@@ -120,7 +120,7 @@ const OtherForm = () => {
             <FormItem>
               <Label className="text-[#737373]">City<span className="text-red-500">*</span></Label>
               <FormControl>
-                <Input placeholder="Missouri" {...field} className="border-[#965d24] rounded-none" />
+                <Input placeholder="Missouri" {...field} className="border-golden rounded-none" />
               </FormControl>
 
             </FormItem>
@@ -130,13 +130,13 @@ const OtherForm = () => {
             <FormItem>
               <Label className="text-[#737373]">Description</Label>
               <FormControl>
-                <Textarea {...field} className="border-[#965d24] rounded-none" />
+                <Textarea {...field} className="border-golden rounded-none" />
               </FormControl>
 
             </FormItem>
           )} />
 
-          <Button type="submit" className="bg-[#965d24] hover:bg-[#dfb968] p-4 rounded-none w-full font-bold uppercase text-sm cursor-pointer" disabled={loading}>
+          <Button type="submit" className="bg-golden hover:bg-golden2 p-4 rounded-none w-full font-bold uppercase text-sm cursor-pointer" disabled={loading}>
             {loading ? <Loader className="animate-spin duration-300" /> : ""}
             Submit
 

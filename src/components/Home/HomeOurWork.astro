@@ -1,31 +1,31 @@
 ---
-import WorkHomeCard from "@/components/Home/WorkHomeCard.astro";
+import WorkHomeCard from "@/components/Home/HomeOurWorkCard.astro";
 ---
 
 <section
-  class="max-w-full w-auto py-8 flex flex-col justify-center items-center gap-8 px-4 text-[#dbdbdb] px-4 md:px-24"
+  class="max-w-full w-auto py-8 flex flex-col justify-center items-center gap-8 px-4 text-light px-4 md:px-24"
 >
   <span class="font-fancy text-5xl self-end">02</span>
   <h3 class="text-4xl md:text-5xl font-fancy">
-    your brand <span class="bg-[#965d24] text-white">captured</span>
+    your brand <span class="bg-golden text-white">captured</span>
   </h3>
 
   <div class="flex flex-col md:flex-row gap-4">
     <WorkHomeCard
       work="restaurants"
       to="restaurants"
-      bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_573B2327-A889-4BEF-AF6D-8364B0C3565E_fizguf.mp4"
+      bgImg=`${import.meta.env.AWS_URL_SERVICES}/mp4/comida7.mp4`
     />
     <div class="flex flex-col gap-4">
       <WorkHomeCard
         work="barbershops"
         to="barbershops"
-        bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/barbershop1_o7qvdp"
+        bgImg=`${import.meta.env.AWS_URL_SERVICES}/mp4/barber2.mp4`
       />
       <WorkHomeCard
         work="more"
         to=""
-        bgImg="https://res.cloudinary.com/dhixihrqm/video/upload/q_auto,f_auto:video/w_1280/copy_23EE74BC-9990-47BD-B6AB-F542E9F1C088_xty3qo.mp4"
+        bgImg=`${import.meta.env.AWS_URL_SERVICES}/mp4/comida4.mp4`
       />
     </div>
   </div>

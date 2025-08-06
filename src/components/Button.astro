@@ -1,0 +1,14 @@
+---
+const { class: className = "" } = Astro.props;
+
+const classNames = className
+  .split(" ")
+  .map((c: string) => "!" + c)
+  .join(" ");
+---
+
+<button
+  class={`bg-golden text-white text-lg font-medium px-6 py-4 rounded-lg hover:bg-golden2 transition-colors cursor-pointer flex items-center gap-4 ${classNames}`}
+>
+  <slot />
+</button>

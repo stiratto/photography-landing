@@ -6,9 +6,9 @@ import Line from "@/components/Line.astro";
 <Line />
 
 <div
-  class="text-[#dbdbdb] flex flex-col md:flex-row items-center justify-around px-6 md:px-24 gap-6 md:gap-12"
+  class="text-light flex flex-col md:flex-row items-center justify-around px-6 md:px-24 gap-6 md:gap-12"
 >
-  <div class="border-4 border-[#dbdbdb] p-6 rounded-full shadow-lg">
+  <div class="border-4 border-light p-6 rounded-full shadow-lg">
     {
       typeof Icon === "string" ? (
         <img src={Icon} class="w-28 h-28" />
@@ -19,7 +19,7 @@ import Line from "@/components/Line.astro";
   </div>
 
   <div class="flex flex-col items-end text-right max-w-xl">
-    <span class="font-fancy bg-[#965d24] px-2 text-white">our work</span>
+    <span class="font-fancy bg-golden px-2 text-white">our work</span>
     <h1 class="font-fancy text-[clamp(2rem,3vw,5rem)] px-4 py-2">
       {title}
     </h1>

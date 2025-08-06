@@ -20,7 +20,7 @@ export const NavbarSheet = () => {
           {
             NavItems.map((service, index) => (
               <li key={index}>
-                <a href={`${service.href}`} className="text-[#dfb968] tracking-wider hover:ml-4 transition-all">
+                <a href={`${service.href}`} className="text-golden2 tracking-wider hover:ml-4 transition-all">
                   {service.text}
                 </a>
               </li>

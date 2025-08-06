@@ -68,6 +68,9 @@ body {
 @theme {
     --font-fancy: "Vortigra", "sans-serif";
     --font-normal: "SpaceGrotesk", "sans-serif";
+    --color-golden: #965d24;
+    --color-golden2: #dfb968;
+    --color-light: #dbdbdb;
 }
 
 :root {

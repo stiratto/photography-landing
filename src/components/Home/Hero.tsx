@@ -1,8 +1,8 @@
-import { CircleQuestionMark, Utensils, ArrowRight, Camera, Sparkles } from "lucide-react";
+import { CircleQuestionMark, Utensils, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import { toast } from "sonner";
 
-const Home = () => {
+const Hero = () => {
 	useEffect(() => {
 		if (localStorage.getItem("form_submitted") === "true") {
 			toast("The form was sent! We will try to contact you as soon as possible :)", {
@@ -19,8 +19,9 @@ const Home = () => {
 	}, [])
 
 	return (
-		<div className="text-center w-full h-screen relative px-4 text-white py-8">
+		<div className="text-center w-full h-screen relative px-4 text-light py-8">
 			<div className="bg-black/60 w-full h-full absolute top-0 left-0 z-10 p-0"></div>
+
 			<div className="absolute top-0 left-0 w-full h-full z-0 flex justify-center items-center gap-4">
 				<video
 					autoPlay
@@ -109,7 +110,6 @@ const Home = () => {
 
 						</div>
 
-						{/* Business Type Selection */}
 
 						<div className="border-t border-white/20 pt-6">
 
@@ -126,7 +126,7 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</div >
 
 
 
@@ -134,4 +134,4 @@ const Home = () => {
 }
 
 
-export default Home
+export default Hero
